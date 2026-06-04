@@ -1,0 +1,28 @@
+/* 1. RESETS - applies to EVERYTHING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. GLOBAL VARIABLES */
+:root {
+    --bg-color: #931010;
+    --text-color: #333;
+    --primary-color: blue;
+    --bgt: #4b274b;
+    --bg: #0f172a;
+    background-color: var(--bgt);
+}
+
+/* 3. BODY background (global default) */
+body {
+    background-color: var(--bg);
+    font-family: Arial, sans-serif;
+
+    border: solid lightgreen 3px;
+
+    margin-bottom: 300px;
+    padding-bottom: 500px;
+
+}

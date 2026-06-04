@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background: #f6e7a8;
+  height: auto;
+  border: solid 10px pink;
+}
+
+.hero {
+  border: dashed 5px red;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #f6e7a8;
+}
+
+.film-band {
+  position: absolute;
+  top: -200%;
+  right: 5%;
+  transform: rotate(25deg);
+  background: #111;
+  padding: 16px 34px;
+  border-radius: 22px;
+}
+
+.film-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: move 4s linear infinite;
+}
+
+.shot {
+  width: 220px;
+  height: 140px;
+  border-radius: 14px;
+  position: relative;
+}
+
+/* Film holes */
+.shot::before,
+.shot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #f6e7a8 0 12px,
+    transparent 12px 24px
+  );
+}
+
+.shot::before {
+  left: -24px;
+}
+
+.shot::after {
+  right: -24px;
+}
+
+/* Colors */
+.c1 { background: #ff4d4d; }
+.c2 { background: #4dff88; }
+.c3 { background: #4da6ff; }
+.c4 { background: #ffd24d; }
+.c5 { background: #b84dff; }
+.c6 { background: #ff8a4d; }
+.c7 { background: #ff6fb1; }
+.c8 { background: #7c6dff; }
+.c9 { background: #4de1ff; }
+.c10 { background: #9cff4d; }
+
+/* Animation */
+@keyframes move {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+
