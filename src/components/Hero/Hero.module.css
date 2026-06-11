@@ -5,19 +5,21 @@
 
 
 .hero {
-    min-height: 70vh;
-    background: #28282a;
+    min-height: 80vh;
+
     display: flex;
     flex-direction: column;  /* Stacks children vertically */
     align-items: center;  /* Centers horizontally */
     justify-content: center; /* Centers vertically (optional) */
+
+    /*control the gap between elements here not using margins!*/
     gap: 2rem;   /* Space between the two sections */
-    
-    margin: 2rem 0;
+
+    padding: 10px 5px;
+    overflow: hidden;
 
 
-
-     border: 2px solid rgb(238, 144, 144);
+    border: 2px solid rgb(238, 144, 144);
 
 }
 
@@ -26,9 +28,10 @@
     width: 100%;
 
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.1fr 1fr;
+
     align-items: center;
 
 
@@ -41,28 +44,45 @@
     animation: fadeInUp 0.6s ease;
 }
 
+
+.heroLabel {
+    font-family: var(--font-inter);
+    font-weight: 200;
+    font-size: var(--hero-label-size);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary-white);
+    margin-bottom: 1rem;
+}
+
 .bigText {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #ffffff;
-    margin-bottom: 24px;
+    font-family: var(--font-ramabhadra);
+    font-size: var(--hero-title-size);
+    line-height: 0.95;
+    font-weight: 400;
+    color: var(--color-primary-white);
+    margin-bottom: 1.5rem;
 }
 
 .keyWord {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-family: var(--font-raleway-dots);
+    font-size: var(--hero-keyword-size);
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 0.35rem;
 }
 
 .smallText {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #94a3b8;
-    margin-bottom: 32px;
-    max-width: 90%;
+    font-family: var(--font-inter);
+    font-size: var(--hero-description-size);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-primary-white);
+    max-width: 38rem;
+    margin-bottom: 2rem;
 }
+
+
 
 .buttons {
     display: flex;
@@ -71,36 +91,63 @@
 }
 
 .ctaButton {
-    background: #667eea;
-    color: white;
+    background: var(--color-primary-white);
+    color: var(--color-secondary-dark);
     border: none;
-    padding: 14px 32px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 16px;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-raleway);
+    font-size: 1.125rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
-    background: #5a67d8;
+    background: var(--color-secondary-white);
     transform: translateY(-2px);
 }
 
 .ghostButton {
+    position: relative;
     background: transparent;
-    color: white;
-    border: 1px solid #667eea;
-    padding: 14px 32px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 16px;
+    border: none;
+    color: var(--color-primary-white);
+    font-family: var(--font-raleway);
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1rem 0;
+
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.ghostButton::after {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--color-primary-white);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.ghostButton:hover::after {
+    transform: scaleX(1);
+}
+
 .ghostButton:hover {
-    background: rgba(102, 126, 234, 0.1);
     transform: translateY(-2px);
 }
 

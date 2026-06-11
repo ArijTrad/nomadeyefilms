@@ -26,22 +26,34 @@ export default function Hero() {
                 
                 {/* LEFT SIDE - TEXT */}
                 <div className={styles.left}>
-                    <h1 className={styles.bigText}>
-                        We Create
-                        <span className={styles.keyWord}>Cinematic</span>
-                        <br />Stories That Connect
-                    </h1>
-                    
-                    <p className={styles.smallText}>
-                        Premium video production and advertising agency helping brands 
-                        tell their story through powerful visuals. From concept to delivery, 
-                        we bring your vision to life.
+
+                    <p className={styles.heroLabel}>
+                        VIDEO EDITING · VIDEOGRAPHY · FILMMAKING
                     </p>
-                    
+
+                    <h1 className={styles.bigText}>
+                        <span className={styles.keyWord}>Videos</span>  That
+                        <br />
+                        Move People
+                        <br />
+                        And Brands
+                    </h1>
+
+                    <p className={styles.smallText}>
+                        Cinematic visuals + ads that convert.
+                        Cinematic visuals + ads that convert.
+                        Cinematic visuals + ads that convert.
+                    </p>
                     <div className={styles.buttons}>
-                        <button className={styles.ctaButton}>Start a Project →</button>
-                        <button className={styles.ghostButton}>Watch Showreel</button>
+                        <button className={styles.ctaButton}>
+                            Start Project
+                        </button>
+
+                        <button className={styles.ghostButton}>
+                            View Work →
+                        </button>
                     </div>
+
                 </div>
                 
                 {/* RIGHT SIDE - IMAGE/VIDEO */}

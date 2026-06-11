@@ -1,7 +1,9 @@
 .container {
     padding: 60px 24px;
-    background: #0a0a0a;
+  /*  background: #0a0a0a; */
     color: white;
+    margin: 100px;
+    border: 2px solid red;
 }
 
 .wrapper {

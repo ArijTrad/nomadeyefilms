@@ -1,12 +1,25 @@
+/*App.module.css*/
 
 
-/* Box wrapper for each component */
+/* Box wrapper for each component  debug purposes*/
 .componentBox {
-    border: 2px solid lightblue;
+ /*   border: 2px solid lightblue;*/
 
     margin: 1px 1px;
-    padding: 3px;
-    background: #74681b;
+    padding: 1px;
+  /* background: #74681b; */ 
     transition: all 0.3s ease;
 }
 
+.mainwrapperinapp
+{
+    border: 2px solid lightblue;
+
+    background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #000000 70vh,
+        #0B0B0B 100%
+    );
+    min-height: 100vh;
+}

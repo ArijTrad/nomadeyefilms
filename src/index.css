@@ -1,6 +1,15 @@
 /*index.css*/
 
 
+
+/*font imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+
+
 /* RESETS */
 * {
     margin: 0;
@@ -24,7 +33,8 @@ button {
 :root {
 
     /* Colors */
-    --bg-dark: #0f172a;      /* Main dark background */
+    --bg-dark: #000000;      /* Main dark background */
+    --bg-gray: #0B0B0B;
     --bg-card: #1e293b;       /* Card background */
     --primary: #667eea;       /* Primary accent color */
     --primary-dark: #5a67d8;  /* Darker accent */
@@ -32,20 +42,38 @@ button {
     --text-gray: #94a3b8;     /* Gray text */
     --border: #334155;        /* Border color */
 
+    --color-primary-white: #F5F5F5;
+    --color-secondary-white: #E6E6E6;
+    --color-primary-dark: black;
+    --color-secondary-dark: #0B0B0B;
+
+
+
     /* Spacing */
     --max-main-container-width: 1200px;
+    --hero-label-size: 1rem;
+    --hero-title-size:clamp(3rem, 5rem, 4rem);
+    --hero-keyword-size: 5.125rem;
+    --hero-description-size: 1.4375rem;
 
 
 
-    /* Border radius */
+    /* Fonts */
+    --font-inter: 'Inter', sans-serif;
+    --font-raleway: 'Raleway', sans-serif;
+    --font-raleway-dots: 'Raleway Dots', sans-serif;
+    --font-ramabhadra: 'Ramabhadra', sans-serif;
+
 
 
 
 }
 
+
 /* 3. GLOBAL STYLES */
 body {
-    background-color: var(--bg-dark);
+    background-color: rgb(54, 141, 27);
+
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-light);
     line-height: 1.5;
