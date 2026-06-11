@@ -1,21 +1,318 @@
+/*Hero.module.css*/
+
+@import url('../../index.css');
+
+
+
+.hero {
+    min-height: 70vh;
+    background: #28282a;
+    display: flex;
+    flex-direction: column;  /* Stacks children vertically */
+    align-items: center;  /* Centers horizontally */
+    justify-content: center; /* Centers vertically (optional) */
+    gap: 2rem;   /* Space between the two sections */
+    
+    margin: 2rem 0;
+
+
+
+     border: 2px solid rgb(238, 144, 144);
+
+}
+
 .container {
-    padding: 60px 24px;
-    background: #0a0a0a;
-    color: white;
-}
+    max-width: var(--max-main-container-width);
+    width: 100%;
 
-.wrapper {
-    max-width: 1280px;
     margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+
+    border: 2px solid rgb(213, 184, 80);
+
 }
 
-.container h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #667eea;
+/* LEFT SIDE */
+.left {
+    animation: fadeInUp 0.6s ease;
 }
 
-.container p {
-    color: #a0a0a0;
+.bigText {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.keyWord {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.smallText {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 32px;
+    max-width: 90%;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ctaButton {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.ghostButton {
+    background: transparent;
+    color: white;
+    border: 1px solid #667eea;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ghostButton:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* RIGHT SIDE - IMAGE */
+.right {
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover {
+    transform: scale(1.02);
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+
+
+/* PLAY BUTTON - SVG Triangle version */
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* NO background circle */
+    background: transparent;
+    border: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Initially hidden and transparent */
+    opacity: 0;
+    visibility: hidden;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Show play button ONLY when hovering over the image wrapper */
+.imageWrapper:hover .playButton {
+    opacity: 0.5;
+    visibility: visible;
+}
+
+/* When hovering the button itself  */
+.playButton:hover {
+    opacity: 0.7 !important;
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* Make the SVG triangle bigger */
+.playButton svg {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* ==========================
+   RADIX VIDEO MODAL
+========================== */
+
+.dialogOverlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    z-index: 1000;
+}
+
+.dialogContent {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(90vw, 1200px);
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    z-index: 1001;
+
+    outline: none;
+}
+
+.vimeoFrame {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+.dialogClose {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.7);
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    z-index: 1002;
+}
+
+.dialogClose:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.visuallyHidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    border: 0;
+}
+
+
+/* ==========================
+   RADIX VIDEO MODAL 
+   ================END=======================
+========================== */
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .bigText {
+        font-size: 40px;
+    }
+    
+    .smallText {
+        max-width: 100%;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+    
+    .left {
+        order: 1;
+    }
+    
+    .right {
+        order: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .bigText {
+        font-size: 32px;
+    }
+    
+    .ctaButton, .ghostButton {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .playButton {
+        width: 60px;
+        height: 60px;
+    }
 }

@@ -1,0 +1,53 @@
+    <!-- ========== SEO METAS ========== -->
+
+    <title>Nomad Eye Films | Video Production & Advertising Agency</title>
+    
+    <!-- DESCRIPTION (Shows in Google search results - 150-160 characters max) -->
+    <meta name="description" content="Nomad Eye Films creates high-impact videos, ads, and content that tell your story. Video production agency specializing in commercial advertising and brand promotion." />
+    
+    <!-- AUTHOR (The CEO/company name) -->
+    <meta name="author" content="Nomad Eye Films" />
+
+    <!-- KEYWORDS (Less important for Google now, but still used by some search engines) -->
+    <meta name="keywords" content="video production, advertising agency, content creation, commercial video, brand promotion, video ads, Nomad Eye Films" />
+    
+    <!-- ROBOTS (Tells search engines what to index - leave as is for now) -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- ========== SOCIAL MEDIA PREVIEWS (Open Graph) ========== -->
+    <!-- These control how your site looks when shared on Facebook, LinkedIn, WhatsApp -->
+    
+    <!-- OG: TITLE (Shows as headline when shared) -->
+    <meta property="og:title" content="Nomad Eye Films | Video Production Agency" />
+    
+    <!-- OG: DESCRIPTION (Shows as text when shared) -->
+    <meta property="og:description" content="Professional video production and advertising agency. We create videos, ads, and content that get results." />
+    
+    <!-- OG: IMAGE (Thumbnail when shared - put a 1200x630px image in public/images/) -->
+    <meta property="og:image" content="/images/og-preview.jpg" />
+    
+    <!-- OG: URL (Your website address) -->
+    <meta property="og:url" content="https://nomadeyefilms.com" />
+    
+    <!-- OG: TYPE (website = general site, article = blog post) -->
+    <meta property="og:type" content="website" />
+    
+    <!-- OG: SITE NAME -->
+    <meta property="og:site_name" content="Nomad Eye Films" />
+    
+    <!-- ========== TWITTER CARDS (For Twitter/X previews) ========== -->
+    
+    <!-- TWITTER CARD TYPE (summary_large_image = shows big image) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- TWITTER TITLE -->
+    <meta name="twitter:title" content="Nomad Eye Films | Video Production Agency" />
+    
+    <!-- TWITTER DESCRIPTION -->
+    <meta name="twitter:description" content="Professional video production and advertising agency. We create videos, ads, and content that tell your story." />
+    
+    <!-- TWITTER IMAGE -->
+    <meta name="twitter:image" content="/images/og-preview.jpg" />
+
+
+
