@@ -51,10 +51,7 @@ button {
 
     /* Spacing */
     --max-main-container-width: 1200px;
-    --hero-label-size: 1rem;
-    --hero-title-size:clamp(3rem, 5rem, 4rem);
-    --hero-keyword-size: 5.125rem;
-    --hero-description-size: 1.4375rem;
+
 
 
 
@@ -65,6 +62,24 @@ button {
     --font-ramabhadra: 'Ramabhadra', sans-serif;
 
 
+
+
+    /*speeds and transitions*/
+    --transition-line-under-links-buttons: 0.6s ;
+
+        /*---GLOBAL VARIABLE FOR TRANSITIONs---*/
+        /*---line that grows under the <a> links or buttons---*/
+    --underlined-link-transition-GLOBAL-variable: 0 ;
+
+
+    /*===@transition styles i loved@===*/
+    /*just copy paste them in the global variable instead of changing in every css file
+         GLOBAL VARIABLE FOR TRANSITIONs
+    */
+    /*
+
+
+    */
 
 
 }

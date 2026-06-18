@@ -18,9 +18,6 @@
     padding: 10px 5px;
     overflow: hidden;
 
-
-    border: 2px solid rgb(238, 144, 144);
-
 }
 
 .container {
@@ -35,11 +32,15 @@
     align-items: center;
 
 
-    border: 2px solid rgb(213, 184, 80);
 
 }
 
-/* LEFT SIDE */
+
+
+/*==============LEFT_SIDE=================*/
+/*==============LEFT_SIDE=================*/
+/*==============LEFT_SIDE=================*/
+
 .left {
     animation: fadeInUp 0.6s ease;
 }
@@ -48,7 +49,7 @@
 .heroLabel {
     font-family: var(--font-inter);
     font-weight: 200;
-    font-size: var(--hero-label-size);
+    font-size: 1rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-primary-white);
@@ -57,7 +58,7 @@
 
 .bigText {
     font-family: var(--font-ramabhadra);
-    font-size: var(--hero-title-size);
+    font-size: clamp(3rem, 5rem, 4rem);
     line-height: 0.95;
     font-weight: 400;
     color: var(--color-primary-white);
@@ -66,7 +67,7 @@
 
 .keyWord {
     font-family: var(--font-raleway-dots);
-    font-size: var(--hero-keyword-size);
+    font-size: 4rem;
     font-weight: 400;
     display: inline-block;
     margin-right: 0.35rem;
@@ -74,7 +75,7 @@
 
 .smallText {
     font-family: var(--font-inter);
-    font-size: var(--hero-description-size);
+    font-size: 1.4375rem;
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-primary-white);
@@ -84,73 +85,21 @@
 
 
 
-.buttons {
+
+/*==============BUTTONS=================*/
+
+.buttonscontainer {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
 }
 
-.ctaButton {
-    background: var(--color-primary-white);
-    color: var(--color-secondary-dark);
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    font-family: var(--font-raleway);
-    font-size: 1.125rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.ctaButton:hover {
-    background: var(--color-secondary-white);
-    transform: translateY(-2px);
-}
 
-.ghostButton {
-    position: relative;
-    background: transparent;
-    border: none;
-    color: var(--color-primary-white);
-    font-family: var(--font-raleway);
-    font-size: 1.125rem;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 1rem 0;
 
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.ghostButton::after {
-    content: '';
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background: var(--color-primary-white);
-
-    transform: scaleX(0);
-
-    transform-origin: left;
-
-    transition: transform 0.3s ease;
-}
-
-.ghostButton:hover::after {
-    transform: scaleX(1);
-}
-
-.ghostButton:hover {
-    transform: translateY(-2px);
-}
-
+/*==============RIGHT_SIDE=================*/
+/*==============RIGHT_SIDE=================*/
+/*==============RIGHT_SIDE=================*/
 /* RIGHT SIDE - IMAGE */
 .right {
     animation: fadeInUp 0.6s ease 0.2s both;

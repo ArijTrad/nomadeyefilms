@@ -9,6 +9,8 @@ import * as Dialog from '@radix-ui/react-dialog';
 
 //docs, assets, imports LOCAL
 import styles from './Hero.module.css'
+import UiButton from '../ui/UiButton/UiButton';
+
 import heroPreviewVideo from "../../assets/videos/herothumbnail/showreel_2025_240p.mp4"
 
 
@@ -44,14 +46,11 @@ export default function Hero() {
                         Cinematic visuals + ads that convert.
                         Cinematic visuals + ads that convert.
                     </p>
-                    <div className={styles.buttons}>
-                        <button className={styles.ctaButton}>
-                            Start Project
-                        </button>
+                    <div className={styles.buttonscontainer}>
+                        <UiButton variant='primary'>CTA primary</UiButton>
+                        <UiButton variant='primary'>CTA primary</UiButton>
+                        <UiButton variant='ghost'>View Work →</UiButton>
 
-                        <button className={styles.ghostButton}>
-                            View Work →
-                        </button>
                     </div>
 
                 </div>
@@ -97,25 +96,6 @@ export default function Hero() {
                 </div>
                 
             </div>
-
-
-
-{/* ######### debug delete later#################### */}
-            <div className={styles.container} >     
-                <div >
-                    <h1>section N</h1>
-                </div>
-                <div >
-                    <h1>section N</h1>
-                </div>
-                <div >
-                    <h1>section N</h1>
-                </div>
-                <div >
-                    <h1>section N</h1>
-                </div>
-                
-           </div>
 
 
 

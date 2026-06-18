@@ -1,9 +1,15 @@
 import styles from './Navbar.module.css'
 
+import UiLink from '../ui/UiLink/UiLink'
+//import Button from '../ui/Button/Button'
+
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
       
+      {/*<component-ui-element>xxxxx</component-ui-element>*/}
+      <UiLink href="#hello" variant="nav">trial </UiLink>
+
       {/* LEFT */}
       <div className={styles.left}>
         <img className={styles.leftlogonavbar} src="/images/nomadeyefilmlogo.svg" alt="Nomad Eye Films" />
