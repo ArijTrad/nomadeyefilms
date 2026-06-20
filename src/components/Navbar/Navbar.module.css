@@ -45,6 +45,9 @@
     align-items: center;
 }
 
+
+
+
 @media (max-width: 968px) {
     .center {
         display: none;

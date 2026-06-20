@@ -4,11 +4,11 @@
     color: var(--color-primary-white);
     text-decoration: none;
     font-family: var(--font-raleway);
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 500;
 
     /*       TOP     RIGHT     BOTTOM      LEFT */
-    padding: 0      0.5rem     0.2rem      0.3rem;
+    padding: 0      0.9em     0.2em      0.3em;
     transition: all 0.3s ease;
 }
 

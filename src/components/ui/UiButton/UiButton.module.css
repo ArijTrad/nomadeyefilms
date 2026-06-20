@@ -1,10 +1,12 @@
 /* UiButton.module.css */
 .button {
-    border-radius: 1rem;
     font-family: var(--font-raleway);
     font-weight: 500;
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+
+    font-size: 1rem;
+    padding: 0.8em 1.4em;
+    border-radius: 0.9em;
+
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
