@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 /* LEFT */
@@ -18,19 +19,22 @@
     gap: 0.75rem;
 
     text-decoration: none;
+    flex-shrink: 0;
 }
 
-.leftlogonavbar {
+.logoImage {
     width: 2.5rem;
     height: auto;
+    flex-shrink: 0;
 }
 
-.logo {
+.logoText {
     font-family: var(--font-inter);
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-primary-white);
     letter-spacing: 0.08em;
+    white-space: nowrap;
 }
 
 /* CENTER */
@@ -43,6 +47,7 @@
 .right {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 
