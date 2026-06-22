@@ -23,8 +23,8 @@ export default function Hero() {
 
     return (
         <>
-        <section className={styles.hero}>
-            <div className={styles.container}>
+
+            <section className={styles.container}>
                 
                 {/* LEFT SIDE - TEXT */}
                 <div className={styles.left}>
@@ -42,9 +42,7 @@ export default function Hero() {
                     </h1>
 
                     <p className={styles.smallText}>
-                        Cinematic visuals + ads that convert.
-                        Cinematic visuals + ads that convert.
-                        Cinematic visuals + ads that convert.
+                        gfh jhxb ukhsnxqk  uk h n xk thf jg vjg as ku hjhs kusx sxkhh b xjk s hm bbss jh
                     </p>
                     <div className={styles.buttonscontainer}>
                         <UiButton variant='primary'>CTA primary</UiButton>
@@ -64,7 +62,7 @@ export default function Hero() {
                         muted
                         loop
                         playsInline
-                        // Optional: fallback image
+                        // Optional: add fallback image
                         // ############### fix the fallback image not working
                         //make if no video the fallback image displays
                         //poster="../../assets/images/hero_fallback.png"
@@ -72,8 +70,7 @@ export default function Hero() {
                             <source src={heroPreviewVideo} type="video/mp4" />
                         </video>
 
-                        <button 
-                            className={styles.playButton}
+                        <button className={styles.playButton}
                             onClick={() => {
                                 setIsVideoOpen(true);
                                 console.log("Play video clicked");
@@ -95,12 +92,10 @@ export default function Hero() {
                     </div>
                 </div>
                 
-            </div>
+            </section>
 
 
 
-
-        </section>
 
 
 

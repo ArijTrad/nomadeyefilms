@@ -1,47 +1,31 @@
 /*Hero.module.css*/
 
+
+/* ANIMATIONS - Imported from index.css */
+/* @keyframes fadeInUp is in index.css */
 @import url('../../index.css');
 
 
 
-.hero {
-    min-height: 80vh;
-
-    display: flex;
-    flex-direction: column;  /* Stacks children vertically */
-    align-items: center;  /* Centers horizontally */
-    justify-content: center; /* Centers vertically (optional) */
-
-    /*control the gap between elements here not using margins!*/
-
-    padding: clamp(1rem, 3vw, 3rem) clamp(0.5rem, 2vw, 2rem);
-    overflow: hidden;
-
-}
-
 .container {
-    max-width: clamp(320px, 90vw, var(--max-main-container-width));
-    width: 100%;
-
-    margin: 0 auto;
 
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: clamp(1rem, 3vw, 3rem);   /* Space between the two sections */
+    gap:  0;
     align-items: center;
 
-
-
+    border: dashed green 5px;
 }
 
 
 
-/*==============LEFT_SIDE=================*/
-/*==============LEFT_SIDE=================*/
-/*==============LEFT_SIDE=================*/
+/*======================================
+==============LEFT_SIDE=================
+========================================*/
 
 .left {
     animation: fadeInUp 0.6s ease;
+    border: dashed rgb(255, 157, 0) 3px;
 }
 
 
@@ -62,6 +46,7 @@
     font-weight: 400;
     color: var(--color-primary-white);
     margin-bottom: 0.5em;
+
 }
 
 .keyWord {
@@ -91,21 +76,25 @@ for buttons see components/ui/UiButton*/
     display: flex;
     gap: 0.8em;
     flex-wrap: wrap;
+
 }
 
 
 
 
-/*==============RIGHT_SIDE=================*/
-/*==============RIGHT_SIDE=================*/
-/*==============RIGHT_SIDE=================*/
-/* RIGHT SIDE - IMAGE */
+/*=======================================
+==============RIGHT_SIDE=================
+=========================================*/
+
+/* RIGHT SIDE - image/video preview */
 .right {
     animation: fadeInUp 0.6s ease 0.2s both;
+    border: dashed rgb(255, 157, 0) 3px;
 }
 
 .imageWrapper {
     position: relative;
+
     border-radius: 24px;
     overflow: hidden;
     cursor: pointer;
@@ -127,17 +116,15 @@ for buttons see components/ui/UiButton*/
 
 
 
-/* PLAY BUTTON - SVG */
+/* PLAY BUTTON - button */
 .playButton {
     position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    /* NO background circle */
-    background: transparent;
-    border: none;
-    
+
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,6 +158,10 @@ for buttons see components/ui/UiButton*/
     filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));
     transition: all 0.3s ease;
 }
+
+
+
+
 
 
 
@@ -265,8 +256,10 @@ for buttons see components/ui/UiButton*/
    ================END=======================
 ========================== */
 
-/* ANIMATIONS - Imported from index.css */
-/* @keyframes fadeInUp is in index.css */
+
+
+
+
 
 
 /*======================================

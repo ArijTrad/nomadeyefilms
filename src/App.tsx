@@ -19,64 +19,91 @@ export default function App() {
 
   return (
     <>
-<div className={styles.mainwrapperinapp}
->
+<div className={styles.pageLayout} >
 
-      <Navbar />
-      
 
-{/* HERO SECTION */}
-<div className={styles.componentBox}>
+
+<div className={`${styles.container} ${styles.stickyNavbarContainer}`}>
+  <Navbar />
+</div>
+
+
+<div className={styles.container}>
   <Hero />
 </div>
 
-{/* CATEGORIES SECTION */}
-<div className={styles.componentBox}>
+
+
+
+
+
+<div className={styles.container}>
+  <h1>section inside app</h1>
+
+  <br /> <br />
+    another section inside app tsx
+      <br /> <br />
+    another section inside app tsx
+</div>
+
+<div className={styles.container}>
+  <h1>section inside app</h1>
+
+  <br /> <br />
+    another section inside app tsx
+      <br /> <br />
+    another section inside app tsx
+</div>
+
+
+{/*
+
+<div className={styles.container}>
   <Categories />
 </div>
 
-{/* WORK PREVIEW SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <WorkPreview />
 </div>
 
-{/* PROBLEM SOLUTION SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <ProblemSolution />
 </div>
 
-{/* PROCESS SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <Process />
 </div>
 
-{/* TESTIMONIALS SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <Testimonials />
 </div>
 
-{/* TRUSTED COMPANIES SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <TrustedCompanies />
 </div>
 
-{/* PRICING SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <Pricing />
 </div>
 
-{/* ABOUT SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <About />
 </div>
 
-{/* CONTACT SECTION */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <Contact />
 </div>
 
-{/* FOOTER */}
-<div className={styles.componentBox}>
+
+<div className={styles.container}>
   <Footer />
 </div>
 
@@ -89,6 +116,13 @@ export default function App() {
           Click me
         </button>
       </div>
+
+*/}
+
+
+
+
+
 </div>
     </>
   )

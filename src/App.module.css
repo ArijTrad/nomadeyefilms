@@ -1,19 +1,15 @@
 /*App.module.css*/
 
 
-/* Box wrapper for each component  debug purposes*/
-.componentBox {
-   /* border: 2px solid lightgoldenrodyellow;*/
+/* ANIMATIONS - Imported from index.css */
+/* @keyframes fadeInUp is in index.css */
+@import url('./index.css');
 
-    margin: 1px 1px;
-    padding: 1px;
-  /* background: #74681b; */ 
-    transition: all 0.3s ease;
-}
 
-.mainwrapperinapp
-{
-    border: 2px solid lightblue;
+
+
+.pageLayout{
+    border: 20px solid lightblue;
 
     background: linear-gradient(
         to bottom,
@@ -21,5 +17,40 @@
         #000000 70vh,
         #0B0B0B 100%
     );
-    min-height: 100vh;
+
+
+    padding-top: 0.5rem;
+
+    display: flex;
+    flex-direction: column;  /*Stacks children vertically */
+    align-items: center;  /*Centers horizontally */
+    justify-content:start  ; /*Centers vertically (optional)*/
+
+    /*control the gap between sections here not using margins!*/
+    gap: 1em;
 }
+
+
+
+/* Box wrapper for each component*/
+.container {
+    border: 3px solid rgb(191, 123, 240);
+
+    width: min( 90vw, var(--max-main-container-width));
+
+}
+
+
+
+.stickyNavbarContainer {
+    position: sticky;
+
+    top: 0;
+    z-index: 100;
+}
+
+
+
+
+
+
