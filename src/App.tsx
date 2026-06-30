@@ -1,6 +1,10 @@
 //App.tsx
 import { useState } from 'react'
+
+
 import styles from './App.module.css'
+
+
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Categories from './components/Categories/Categories'
@@ -14,6 +18,13 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
+
+
+import heroPreview from './assets/videos/herothumbnail/fff.jpg'
+
+
+
+
 export default function App() {
   const [count, setCount] = useState(0)
 
@@ -26,6 +37,18 @@ export default function App() {
 <div className={`${styles.container} ${styles.stickyNavbarContainer}`}>
   <Navbar />
 </div>
+
+
+
+
+  {/* img debug */}
+        <div className={styles.container}>
+          <img 
+            src={heroPreview} 
+            alt="Hero preview" 
+            className={styles.testImage}
+          />
+        </div>
 
 
 <div className={styles.container}>

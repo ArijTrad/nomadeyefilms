@@ -51,3 +51,10 @@
 
 
 
+
+/* App.module.css - add this class */
+.testImage {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
