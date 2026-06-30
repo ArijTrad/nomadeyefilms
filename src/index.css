@@ -97,8 +97,12 @@ body {
     color: var(--text-light);
     line-height: 1.5;
 
-/* debug borders and large padding */
+/* debug borders and large padding
     border: solid lightgreen 3px;
+
+     */
+
+     
     margin-bottom: 300px;
     padding-bottom: 500px;
 

@@ -9,10 +9,18 @@
 
     cursor: pointer;
     transition: all 0.3s ease;
-    border: none;
+
 }
 
-/* Variants */
+
+.button:active {
+    transform: scale(0.9) !important;
+    transition-duration: 0.05s;
+}
+
+
+
+/*=======PRIMARY=======*/
 .primary {
     background: var(--color-primary-white);
     color: var(--color-secondary-dark);
@@ -23,15 +31,58 @@
     transform: translateY(-2px);
 }
 
+.primary:active {
+    background: #d0d0d0;
+}
+
+
+
+/*=======GHOST=======*/
+
 .ghost {
-    background: var(--color-secondary-dark);
+    background: var(--color-primary-dark);
     color: var(--color-primary-white);
     border: 1px solid var(--color-secondary-white);
 
 }
 
 .ghost:hover {
-    background: transparent;
+    background: var(--color-secondary-dark);
+
     transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }
+
+
+.ghost:active {
+    background: var(--color-secondary-dark);
+    border-color: var(--color-secondary-white);
+}
+
+/* ===== RIPPLE EFFECT ===== */
+.ghost::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.ghost:active::after {
+    opacity: 1;
+    transition-duration: 0.05s;
+}
+
+
+
+
+
+
+
+
+
+
+
+

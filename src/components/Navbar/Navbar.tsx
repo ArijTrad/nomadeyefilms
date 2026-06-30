@@ -1,10 +1,26 @@
+//Navbar.tsx
+
+import { LiquidGlass } from "@sellinedev/liquid-glass-react";
+
+
 import styles from './Navbar.module.css'
 import UiLink from '../ui/UiLink/UiLink'
 import UiButton from '../ui/UiButton/UiButton'
 
 export default function Navbar() {
   return (
-    <div className={styles.navbar}>
+
+    <LiquidGlass
+    displacementScale={40}
+    blurAmplitude={0.03}
+    saturation={130}
+    aberrationIntensity={3}
+    elasticity={0.35}
+>
+    <div
+      className={styles.navbar}>
+
+
       {/* LEFT */}
       <a href="/" className={styles.left}>
         <img className={styles.leftlogonavbar} src="/images/nomadeyefilmlogo.svg" alt="Nomad Eye Films" />
@@ -23,6 +39,11 @@ export default function Navbar() {
       <div className={styles.right}>
         <UiButton variant="primary">Get Started</UiButton>
       </div>
+
+
     </div>
+    </LiquidGlass>
   )
 }
+
+

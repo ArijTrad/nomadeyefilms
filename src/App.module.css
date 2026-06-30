@@ -9,7 +9,6 @@
 
 
 .pageLayout{
-    border: 20px solid lightblue;
 
     background: linear-gradient(
         to bottom,
@@ -18,23 +17,21 @@
         #0B0B0B 100%
     );
 
-
-    padding-top: 0.5rem;
+    padding-top: 2em;
 
     display: flex;
     flex-direction: column;  /*Stacks children vertically */
     align-items: center;  /*Centers horizontally */
-    justify-content:start  ; /*Centers vertically (optional)*/
+    justify-content: start; /*Centers vertically (optional)*/
 
     /*control the gap between sections here not using margins!*/
-    gap: 1em;
+    gap: 2em;
 }
 
 
 
 /* Box wrapper for each component*/
 .container {
-    border: 3px solid rgb(191, 123, 240);
 
     width: min( 90vw, var(--max-main-container-width));
 
