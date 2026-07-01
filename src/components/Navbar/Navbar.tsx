@@ -35,7 +35,7 @@ ${styles.liq}`}
 >
 
 
-
+                    
       {/* LEFT */}
       <a href="/" className={styles.left}>
         <img className={styles.leftlogonavbar} src="/images/nomadeyefilmlogo.svg" alt="Nomad Eye Films" />

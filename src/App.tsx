@@ -20,7 +20,7 @@ import Footer from './components/Footer/Footer'
 
 
 
-import heroPreview from './assets/videos/herothumbnail/fff.jpg'
+import testingimg from './assets/videos/herothumbnail/fff.jpg'
 
 
 
@@ -44,8 +44,8 @@ export default function App() {
   {/* img debug */}
         <div className={styles.container}>
           <img 
-            src={heroPreview} 
-            alt="Hero preview" 
+            src={testingimg} 
+            alt="image for testing" 
             className={styles.testImage}
           />
         </div>
