@@ -1,0 +1,20 @@
+# add-file-comment.ps1
+# Run this script inside any folder to add file name comments to all .tsx, .css, and .module.css files
+
+Get-ChildItem -Recurse -Include *.tsx, *.css, *.module.css | ForEach-Object {
+    $file = $_.FullName
+    $fileName = $_.Name
+    $content = Get-Content $file -Raw
+    
+    # Check if file already has the comment at the very beginning
+    $pattern = "^/\* $fileName \*/\r?\n|^// $fileName\r?\n"
+    
+    if ($content -notmatch $pattern) {
+        # Add comment at the beginning
+        $newContent = "/* $fileName */`n" + $content
+        Set-Content -Path $file -Value $newContent -NoNewline
+        Write-Host "Added comment to: $fileName"
+    } else {
+        Write-Host "Skipped (already has comment): $fileName"
+    }
+}
