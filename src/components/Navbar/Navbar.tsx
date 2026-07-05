@@ -14,7 +14,7 @@ export default function Navbar() {
 
 <div className={styles.roundedParent}>
 
-<UiLiquidGlass className={styles.liglasnav}>
+<UiLiquidGlass className={styles.navbarGlass}>
 
 
 <div 

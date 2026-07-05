@@ -19,6 +19,9 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 
+import UiLiquidGlassFilter from './components/ui/UiLiquidGlass/UiLiquidGlassFilter';
+
+
 
 import testingimg from './assets/videos/herothumbnail/fff.jpg'
 
@@ -30,7 +33,10 @@ export default function App() {
 
   return (
     <>
+<UiLiquidGlassFilter />
+
 <div className={styles.pageLayout} >
+
 
 
 

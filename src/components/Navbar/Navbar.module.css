@@ -23,7 +23,6 @@ border-radius: 50px;
 
 .navbar {
     padding: 1em 1.5em;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
