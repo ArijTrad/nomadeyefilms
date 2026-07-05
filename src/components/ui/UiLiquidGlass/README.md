@@ -28,9 +28,10 @@ Every component can reference it using:
 
 ```css
 backdrop-filter: url(#displacementFilter) blur(...);
+-webkit-backdrop-filter: blur(2px); /*safari fallback*/
 ```
 
-The filter should only be rendered **once** in the application.
+The filter is rendered only **once** in the application.
 
 ---
 
@@ -45,6 +46,8 @@ Best for simple components.
     </div>
 </UiLiquidGlass>
 ```
+
+ps: can be styled using teh added class ```glass``` for example
 
 Use when:
 
