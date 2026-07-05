@@ -1,20 +1,6 @@
 /* Navbar.module.css */
 
 
-/*
-.liglasnav{
-
-    border-radius: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 8px 1px hsla(0, 0%, 25%, 0.248);border-radius: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 8px 1px hsla(0, 0%, 25%, 0.248);
-
-    background: hsla(0, 0%, 0%, 0.497);
-}
-*/
-
-
 .roundedParent{
 
 overflow: hidden;
@@ -22,33 +8,51 @@ border-radius: 50px;
 }
 
 .navbar {
-    padding: 1em 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+    border-radius: 1em;
+    overflow: hidden;
+
 
     height: 300px;
 
+    background: hsla(0, 0%, 0%, 0.426);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+
+
+
+
 
 /*
-
-    border-radius: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 8px 1px hsla(0, 0%, 25%, 0.248);border-radius: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 8px 1px hsla(0, 0%, 25%, 0.248);
-
-    background: hsla(0, 0%, 0%, 0.497);
-
-
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
 */
 }
 
 
+.glassLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 
+  backdrop-filter: url(#displacementFilter) blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  border-radius: inherit;
+}
+
+
+.contentLayer {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1em 1.5em;
+  height: 100%;
+}
 
 
 /* LEFT */

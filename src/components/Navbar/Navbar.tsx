@@ -6,23 +6,25 @@ import styles from './Navbar.module.css'
 import UiLink from '../ui/UiLink/UiLink'
 import UiButton from '../ui/UiButton/UiButton'
 
-import UiLiquidGlass from '../ui/UiLiquidGlass/UiLiquidGlass';
+
+
 
 export default function Navbar() {
   return (
 <>
 
-<div className={styles.roundedParent}>
-
-<UiLiquidGlass className={styles.navbarGlass}>
 
 
 <div 
 className={`${styles.navbar}`}
 >
+      {/* GLASS LAYER */}
+      <div className={styles.glassLayer} />
+
+      {/* CONTENT LAYER */}
+      <div className={styles.contentLayer}>
 
 
-                    
       {/* LEFT */}
       <a href="/" className={styles.left}>
         <img className={styles.leftlogonavbar} src="/images/nomadeyefilmlogo.svg" alt="Nomad Eye Films" />
@@ -45,10 +47,9 @@ className={`${styles.navbar}`}
 
     </div>
 
+</div>
 
 
-</UiLiquidGlass>
-    </div>
 
 </>
 )
