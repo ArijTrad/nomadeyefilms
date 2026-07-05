@@ -1,11 +1,6 @@
 /* Navbar.module.css */
 
 
-.roundedParent{
-
-overflow: hidden;
-border-radius: 50px;
-}
 
 .navbar {
     position: relative;
@@ -18,11 +13,6 @@ border-radius: 50px;
     background: hsla(0, 0%, 0%, 0.426);
     box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
     border: 1px solid rgba(255,255,255,0.2);
-
-
-
-
-
 /*
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);

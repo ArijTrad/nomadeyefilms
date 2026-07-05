@@ -47,7 +47,7 @@ Best for simple components.
 </UiLiquidGlass>
 ```
 
-ps: can be styled using teh added class ```glass``` for example
+ps: can be styled using the added class ```glass``` for example
 
 Use when:
 
@@ -75,6 +75,10 @@ Best for advanced UI.
 
 </div>
 ```
+
+ps: content layer, actual content that the element has, text, buttons, links...
+
+
 
 Example CSS:
 
@@ -143,7 +147,7 @@ It does **not** inherit the parent's shape automatically.
 
 ✓ Style each component normally; the glass is only responsible for the visual effect.
 
-✗ Do not render multiple `UiLiquidGlassFilter` components.
+✗ there re no multiple `UiLiquidGlassFilter` components, as it's imported only once in ```App.tsx```
 
 ✗ Do not mix Option A and Option B inside the same component unless intentionally creating multiple glass surfaces.
 
@@ -153,10 +157,5 @@ It does **not** inherit the parent's shape automatically.
 
 Possible additions:
 
-- Glass variants (`nav`, `card`, `hero`)
-- Theme support
-- Adjustable blur amount
-- Adjustable displacement scale
-- Animated distortion
-- Mouse-reactive glass
-- Scroll-based parallax
+- fix firefox and safari fallback
+
