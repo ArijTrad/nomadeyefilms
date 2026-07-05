@@ -9,7 +9,6 @@
 
 
 .pageLayout{
-
     background: linear-gradient(
         to bottom,
         #000000 0%,
@@ -17,7 +16,7 @@
         #0B0B0B 100%
     );
 
-    padding-top: 2em;
+    padding-top: 1em;
 
     display: flex;
     flex-direction: column;  /*Stacks children vertically */
@@ -28,16 +27,13 @@
     gap: 2em;
 }
 
-
-
 /* Box wrapper for each component*/
 .container {
-
     width: min( 90vw, var(--max-main-container-width));
 
+    border: 10px solid rgba(18, 161, 42, 0.35);
+
 }
-
-
 
 .stickyNavbarContainer {
     position: sticky;
@@ -52,7 +48,17 @@
 
 
 
-/* App.module.css - add this class */
+/* img debug
+        <div className={styles.container}>
+          <img 
+            src={testingimg} 
+            alt="image for testing" 
+            className={styles.testImage}
+          />
+        </div>
+
+
+*/
 .testImage {
     width: 100%;
     height: auto;

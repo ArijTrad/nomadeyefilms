@@ -46,17 +46,6 @@ export default function App() {
 
 
 
-
-  {/* img debug */}
-        <div className={styles.container}>
-          <img 
-            src={testingimg} 
-            alt="image for testing" 
-            className={styles.testImage}
-          />
-        </div>
-
-
 <div className={styles.container}>
   <Hero />
 </div>
@@ -66,31 +55,15 @@ export default function App() {
 
 
 
-<div className={styles.container}>
-  <h1>section inside app</h1>
-
-  <br /> <br />
-    another section inside app tsx
-      <br /> <br />
-    another section inside app tsx
-</div>
-
-<div className={styles.container}>
-  <h1>section inside app</h1>
-
-  <br /> <br />
-    another section inside app tsx
-      <br /> <br />
-    another section inside app tsx
-</div>
 
 
-{/*
 
 <div className={styles.container}>
   <Categories />
 </div>
 
+
+{/*
 
 <div className={styles.container}>
   <WorkPreview />

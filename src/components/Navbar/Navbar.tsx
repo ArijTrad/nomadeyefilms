@@ -13,11 +13,10 @@ export default function Navbar() {
   return (
 <>
 
-
-
 <div 
 className={`${styles.navbar}`}
 >
+
       {/* GLASS LAYER */}
       <div className={styles.glassLayer} />
 

@@ -23,7 +23,7 @@
 ========================================*/
 
 .left {
-    animation: fadeInUp 0.6s ease;
+    animation: fadeInUp 3s ease;
 }
 
 
@@ -86,7 +86,7 @@ for buttons see components/ui/UiButton*/
 
 /* RIGHT SIDE - image/video preview */
 .right {
-    animation: fadeInUp 0.6s ease 0.2s both;
+    animation: fadeInUp 3s ease 0.2s both;
 
 }
 

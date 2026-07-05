@@ -46,7 +46,6 @@ export default function Hero() {
                     </p>
                     <div className={styles.buttonscontainer}>
                         <UiButton variant='primary'>CTA primary</UiButton>
-                        <UiButton variant='primary'>CTA primary</UiButton>
                         <UiButton variant='ghost'>View Work →</UiButton>
 
                     </div>
