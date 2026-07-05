@@ -6,17 +6,19 @@ import styles from './Navbar.module.css'
 import UiLink from '../ui/UiLink/UiLink'
 import UiButton from '../ui/UiButton/UiButton'
 
+import UiLiquidGlass from '../ui/UiLiquidGlass/UiLiquidGlass';
+
 export default function Navbar() {
   return (
 <>
 
+<div className={styles.roundedParent}>
 
-
+<UiLiquidGlass className={styles.liglasnav}>
 
 
 <div 
-className={`${styles.navbar}
-${styles.liq}`}
+className={`${styles.navbar}`}
 >
 
 
@@ -41,6 +43,11 @@ ${styles.liq}`}
       </div>
 
 
+    </div>
+
+
+
+</UiLiquidGlass>
     </div>
 
 </>

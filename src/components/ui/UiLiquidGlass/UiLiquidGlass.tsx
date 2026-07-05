@@ -9,18 +9,20 @@ import UiLiquidGlassFilter from './UiLiquidGlassFilter';
 
 type UiLiquidGlassProps = {
   children: ReactNode;
+  className?: string;
 };
 
 export default function UiLiquidGlass({
-  children,
+  children, className
 }: UiLiquidGlassProps) {
   return (
     <>
       <UiLiquidGlassFilter />
 
-      <div className={styles.root}>
+      <div className={`${styles.liq} ${className}`}>
         {children}
       </div>
     </>
   );
 }
+
