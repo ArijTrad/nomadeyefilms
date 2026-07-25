@@ -1,10 +1,13 @@
 //App.tsx
+
+//libraries imports
 import { useState } from 'react'
 
 
+//styles imports
 import styles from './App.module.css'
 
-
+//components imports
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Categories from './components/Categories/Categories'
@@ -19,11 +22,10 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 
+
+//UIs imports
 import UiLiquidGlassFilter from './components/ui/UiLiquidGlass/UiLiquidGlassFilter';
 
-
-
-import testingimg from './assets/videos/herothumbnail/fff.jpg'
 
 
 
@@ -53,10 +55,15 @@ export default function App() {
 
 
 
+<div className={styles.container}>
+  <Categories />
+</div>
 
 
 
-
+<div className={styles.container}>
+  <WorkPreview />
+</div>
 
 <div className={styles.container}>
   <Categories />
@@ -64,11 +71,6 @@ export default function App() {
 
 
 {/*
-
-<div className={styles.container}>
-  <WorkPreview />
-</div>
-
 
 <div className={styles.container}>
   <ProblemSolution />
@@ -109,7 +111,7 @@ export default function App() {
   <Footer />
 </div>
 
-
+*/}
 
             <div className={styles.hi_iam}>
         <h1>hi i am the app main page</h1>
@@ -119,7 +121,7 @@ export default function App() {
         </button>
       </div>
 
-*/}
+
 
 
 

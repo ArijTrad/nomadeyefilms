@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "ads",
+      "name": "Ads",
+      "imagepath": "/images/servicesthumbnails/ads.png"
+    },
+    {
+      "id": "cinematography",
+      "name": "Cinematography",
+      "imagepath": "/images/servicesthumbnails/cinematog.png"
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "imagepath": "/images/servicesthumbnails/events.png"
+    },
+    {
+      "id": "food",
+      "name": "Food Videos",
+      "imagepath": "/images/servicesthumbnails/foodvids.png"
+    },
+    {
+      "id": "medical",
+      "name": "Medical",
+      "imagepath": "/images/servicesthumbnails/med.png"
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "imagepath": "/images/servicesthumbnails/music.png"
+    },
+    {
+      "id": "real-estate",
+      "name": "Real Estate",
+      "imagepath": "/images/servicesthumbnails/realest.png"
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "imagepath": "/images/servicesthumbnails/sports.png"
+    }
+  ]
+}

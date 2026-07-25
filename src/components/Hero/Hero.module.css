@@ -10,27 +10,33 @@
 .container {
 
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap:  0;
+    grid-template-columns: 1fr 1.1fr;
+    gap:  0.3em;
     align-items: center;
 
 }
 
 
+/*ease in animations of hero, from down to up*/
+.right {
+    animation: fadeInUp 1s ease 0.2s both;
+
+}
+.left {
+    animation: fadeInUp 1s ease;
+}
 
 /*======================================
 ==============LEFT_SIDE=================
 ========================================*/
 
-.left {
-    animation: fadeInUp 3s ease;
-}
+
 
 
 .heroLabel {
     font-family: var(--font-inter);
     font-weight: 200;
-    font-size: clamp(0.7rem, 1vw + 0.3rem, 1rem);
+    font-size: clamp(0.5rem, 0.7vw + 0.1rem, 1rem);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-primary-white);
@@ -39,7 +45,7 @@
 
 .bigText {
     font-family: var(--font-ramabhadra);
-    font-size: clamp(2.2rem, calc(4vw + 1.2rem), 4.5rem);
+    font-size: clamp(2rem, calc(3vw + 0.8rem), 3rem);
     line-height: 0.95;
     font-weight: 400;
     color: var(--color-primary-white);
@@ -49,14 +55,14 @@
 
 .keyWord {
     font-family: var(--font-raleway-dots);
-    font-size: clamp(2.2rem, calc(4vw + 1.2rem), 4.5rem);
+    font-size: clamp(2rem, calc(3vw + 0.8rem), 3rem);
     font-weight: 400;
     display: inline-block;
 }
 
 .smallText {
     font-family: var(--font-inter);
-    font-size: clamp(1rem, calc(1.2vw + 0.6rem), 1.5rem);
+    font-size: clamp(0.7rem, calc(0.7vw + 0.3rem), 1.2rem);
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-primary-white);
@@ -85,10 +91,7 @@ for buttons see components/ui/UiButton*/
 =========================================*/
 
 /* RIGHT SIDE - image/video preview */
-.right {
-    animation: fadeInUp 3s ease 0.2s both;
 
-}
 
 .imageWrapper {
     position: relative;
@@ -250,7 +253,7 @@ for buttons see components/ui/UiButton*/
 
 
 /* ==========================
-   RADIX VIDEO MODAL 
+   RADIX VIDEO MODAL=====EENNDD
    ================END=======================
 ========================== */
 

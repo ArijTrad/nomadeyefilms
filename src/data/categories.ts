@@ -1,0 +1,30 @@
+/*categories.ts*/
+
+export type Category = {
+  id: string;
+  name: string;
+  imagepath: string;
+};
+
+
+
+export async function getCategories(): Promise<Category[]> {
+  const response = await fetch("http://localhost:3000/categories");
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch categories.");
+  }
+
+  return response.json();
+}
+
+/*
+export const categories: Category[] = [
+  {
+    id: "ads",
+    name: "Ads",
+    imagepath: "/images/servicesthumbnails/ads.png",
+  },
+];
+
+ */
