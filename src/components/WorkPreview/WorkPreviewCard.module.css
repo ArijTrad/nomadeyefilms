@@ -1,0 +1,155 @@
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    border-radius: 1em;
+    border: 1.3px solid rgba(255, 255, 255, 0.17);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: filter 0.4s ease;
+}
+
+
+/* Bottom information */
+
+.info {
+    position: absolute;
+
+    left: 1.25rem;
+    bottom: 1.25rem;
+
+    z-index: 3;
+
+    color: white;
+}
+
+
+.category {
+    margin: 0 0 0.3rem;
+
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    opacity: 0.75;
+}
+
+
+.title {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Dark gradient at the bottom */
+
+.card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.58) 40%,
+        rgba(193, 13, 13, 0) 90%
+    );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* Hover description overlay */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background: rgba(0, 0, 0, 0.325);
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+    pointer-events: none;
+}
+
+
+.description {
+    max-width: 80%;
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* Hover */
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 7px 20px rgba(255, 255, 255, 0.094);
+}
+
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+
+/* Slightly darken image underneath */
+
+.card:hover .image {
+    filter: brightness(0.55);
+}
+
+
+/* Press */
+
+.card:active {
+    transform: scale(0.97) !important;
+
+    transition-duration: 0.05s;
+}

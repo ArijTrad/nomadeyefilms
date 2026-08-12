@@ -28,14 +28,14 @@ export function useFadeIn() {
 
 
 //hoook design
-// design 2 [dom]  V/S  design  2  [react]   
+// design 1 [dom]  V/S  design  2  [react]   
 //    state trigger  
-
 
 
 
 /*
 //the old hook, made by me
+//old hook is design 1
 //useFadeIn.ts
 
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 //dataimports
+//categories.ts ===data layer=== separate ui from logic
 import { getCategories } from "../../data/categories";
 import type { Category } from "../../data/categories";
 

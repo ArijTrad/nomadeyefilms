@@ -1,21 +1,58 @@
+/* WorkPreview.module.css */
+
 .container {
-    padding: 60px 24px;
-    background: #0a0a0a;
-    color: white;
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 2s ease,
+        transform 2s ease;
 }
 
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    text-align: center;
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.container h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #667eea;
+.title {
+    padding: 0 0 1em 0.5em;
 }
 
-.container p {
-    color: #a0a0a0;
+
+/* Main grid */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 1rem;
 }
+
+
+/* First two landscape tiles */
+
+.cardWide {
+    grid-column: span 3;
+
+    aspect-ratio: 370 / 210;
+}
+
+
+/* Bottom three portrait tiles */
+
+.cardTall {
+    grid-column: span 2;
+
+    aspect-ratio: 3 / 4;
+}
+
+
+/* View More */
+
+.linkcenterer {
+    margin: 1.7em 0 0 1em;
+}
+
+
+

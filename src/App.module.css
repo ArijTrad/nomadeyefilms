@@ -24,7 +24,7 @@
     justify-content: start; /*Centers vertically (optional)*/
 
     /*control the gap between sections here not using margins!*/
-    gap: 2em;
+    gap: 3em;
 }
 
 /* Box wrapper for each component*/
@@ -64,3 +64,5 @@
     height: auto;
     border-radius: 16px;
 }
+
+
