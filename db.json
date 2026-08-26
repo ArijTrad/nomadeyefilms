@@ -3,42 +3,128 @@
     {
       "id": "ads",
       "name": "Ads",
-      "imagepath": "/images/servicesthumbnails/ads.png"
+      "imageUrl": "/images/servicesthumbnails/ads.png"
     },
     {
       "id": "cinematography",
       "name": "Cinematography",
-      "imagepath": "/images/servicesthumbnails/cinematog.png"
+      "imageUrl": "/images/servicesthumbnails/cinematog.png"
     },
     {
       "id": "events",
       "name": "Events",
-      "imagepath": "/images/servicesthumbnails/events.png"
+      "imageUrl": "/images/servicesthumbnails/events.png"
     },
     {
       "id": "food",
       "name": "Food Videos",
-      "imagepath": "/images/servicesthumbnails/foodvids.png"
+      "imageUrl": "/images/servicesthumbnails/foodvids.png"
     },
     {
       "id": "medical",
       "name": "Medical",
-      "imagepath": "/images/servicesthumbnails/med.png"
+      "imageUrl": "/images/servicesthumbnails/med.png"
     },
     {
       "id": "music",
       "name": "Music",
-      "imagepath": "/images/servicesthumbnails/music.png"
+      "imageUrl": "/images/servicesthumbnails/music.png"
     },
     {
       "id": "real-estate",
       "name": "Real Estate",
-      "imagepath": "/images/servicesthumbnails/realest.png"
+      "imageUrl": "/images/servicesthumbnails/realest.png"
     },
     {
-      "id": "sports",
+      "id": "456323ggfb",
       "name": "Sports",
-      "imagepath": "/images/servicesthumbnails/sports.png"
+      "imageUrl": "/images/servicesthumbnails/sports.png"
+    }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+  "works": [
+    {
+      "id": "1",
+      "title": "Mediterranean Summer",
+      "description": "A cinematic journey through Mediterranean landscapes, light and atmosphere.",
+      "category_id": "cinematography",
+      "thumbnail_url": "/videos/videothumbnails/city.jpg",
+      "preview_video_url": "/videos/videothumbnails/659651815 mediterranean_summer (360p).mp4",
+      "vimeo_id": "659651815"
+    },
+    {
+      "id": "2",
+      "title": "My Year 2021",
+      "description": "A cinematic visual story capturing moments, movement and atmosphere.",
+      "category_id": "cinematography",
+      "thumbnail_url": "/videos/videothumbnails/nature.jpg",
+      "preview_video_url": "/videos/videothumbnails/726297254 my_year_2021 (240p).mp4",
+      "vimeo_id": "726297254"
+    },
+    {
+      "id": "3",
+      "title": "Music Video Showreel",
+      "description": "A dynamic music-focused production built around rhythm, movement and visual energy.",
+      "category_id": "music",
+      "thumbnail_url": "/videos/videothumbnails/movement.jpg",
+      "preview_video_url": "/videos/videothumbnails/820857303 music_video_showreel_2023 (240p).mp4",
+      "vimeo_id": "820857303"
+    },
+    {
+      "id": "4",
+      "title": "FTA Karting Event",
+      "description": "Fast-paced event coverage focused on speed, action and competition.",
+      "category_id": "sports",
+      "thumbnail_url": "/videos/videothumbnails/event.jpg",
+      "preview_video_url": "/videos/videothumbnails/872931428 fta_karting_event (240p).mp4",
+      "vimeo_id": "872931428"
+    },
+    {
+      "id": "5",
+      "title": "Hergla Park",
+      "description": "A vibrant tourism production capturing the atmosphere and experience of Hergla Park.",
+      "category_id": "events",
+      "thumbnail_url": "/videos/videothumbnails/city.jpg",
+      "preview_video_url": "/videos/videothumbnails/882437595 tourism_event_hergla_park (240p).mp4",
+      "vimeo_id": "882437595"
+    },
+    {
+      "id": "6",
+      "title": "2023 Recap",
+      "description": "A fast-paced cinematic recap bringing together memorable moments and highlights.",
+      "category_id": "events",
+      "thumbnail_url": "/videos/videothumbnails/studio.jpg",
+      "preview_video_url": "/videos/videothumbnails/925563088 2023_recap_2 (240p).mp4",
+      "vimeo_id": "925563088"
+    },
+    {
+      "id": "7",
+      "title": "Griotte Showreel",
+      "description": "A polished commercial showreel combining product visuals, atmosphere and cinematic movement.",
+      "category_id": "ads",
+      "thumbnail_url": "/videos/videothumbnails/studio.jpg",
+      "preview_video_url": "/videos/videothumbnails/925566153 griotte_showreel_3 (240p).mp4",
+      "vimeo_id": "925566153"
+    },
+    {
+      "id": "8",
+      "title": "Dr Nabil Zitouna",
+      "description": "A professional medical production combining clear communication with cinematic visuals.",
+      "category_id": "medical",
+      "thumbnail_url": "/videos/videothumbnails/nature.jpg",
+      "preview_video_url": "/videos/videothumbnails/935978814 dr_nabil_zitouna (240p).mp4",
+      "vimeo_id": "935978814"
     }
   ]
 }

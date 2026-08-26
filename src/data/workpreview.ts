@@ -1,52 +1,57 @@
 /* workpreview.ts */
 
+import type { Category } from "./categories";
+
 export type WorkPreview = {
   id: string;
   title: string;
   category: string;
   description: string;
-  imagepath: string;
+  thumbnailUrl: string;
+  previewVideoUrl: string;
+  vimeoId: string;
 };
 
 
-export const workPreview: WorkPreview[] = [
-  {
-    id: "1",
-    category: "Commercial",
-    title: "City",
-    description: "A cinematic commercial capturing the energy and movement of the city.",
-    imagepath: "/videos/videothumbnails/city.jpg",
-  },
+type WorkFromApi = {
+  id: string;
+  title: string;
+  description: string;
+  category_id: string;
+  thumbnail_url: string;
+  preview_video_url: string;
+  vimeo_id: string;
+};
 
-  {
-    id: "2",
-    category: "Events",
-    title: "Event",
-    description: "Dynamic event coverage focused on atmosphere, people and memorable moments.",
-    imagepath: "/videos/videothumbnails/event.jpg",
-  },
 
-  {
-    id: "3",
-    category: "Sports",
-    title: "Movement",
-    description: "Fast-paced visual storytelling built around movement, energy and action.",
-    imagepath: "/videos/videothumbnails/movement.jpg",
-  },
 
-  {
-    id: "4",
-    category: "Nature",
-    title: "Nature",
-    description: "A visual exploration of natural landscapes, light and atmosphere.",
-    imagepath: "/videos/videothumbnails/nature.jpg",
-  },
 
-  {
-    id: "5",
-    category: "Studio",
-    title: "Studio",
-    description: "Controlled studio production combining clean visuals and cinematic lighting.",
-    imagepath: "/videos/videothumbnails/studio.jpg",
-  },
-];
+export async function getWorkPreviews(): Promise<WorkPreview[]> {
+  const [worksResponse, categoriesResponse] = await Promise.all([
+    fetch("http://192.168.0.7:3000/works"),
+    fetch("http://192.168.0.7:3000/categories"),
+  ]);
+
+  if (!worksResponse.ok || !categoriesResponse.ok) {
+    throw new Error("Failed to fetch work previews.");
+  }
+
+  const works: WorkFromApi[] = await worksResponse.json();
+  const categories: Category[] = await categoriesResponse.json();
+
+  return works.map((work) => {
+    const category = categories.find(
+      (category) => category.id === work.category_id
+    );
+
+    return {
+      id: work.id,
+      title: work.title,
+      description: work.description,
+      category: category?.name ?? "Unknown",
+      thumbnailUrl: work.thumbnail_url,
+      previewVideoUrl: work.preview_video_url,
+      vimeoId: work.vimeo_id,
+    };
+  });
+}

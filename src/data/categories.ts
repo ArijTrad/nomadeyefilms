@@ -3,7 +3,7 @@
 export type Category = {
   id: string;
   name: string;
-  imagepath: string;
+  imageUrl: string;
 };
 
 

@@ -2,7 +2,7 @@
 
 .container {
     opacity: 0;
-    transform: translateY(60px) ;
+    transform: translateY(70px) ;
     transition: opacity 2s ease, transform 2s ease;
 }
 

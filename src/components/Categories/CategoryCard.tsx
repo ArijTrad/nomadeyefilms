@@ -19,7 +19,7 @@ export default function CategoryCard({ category }: CategoriesCardProps) {
 
             <img
             className={styles.image}
-            src={category.imagepath}
+            src={category.imageUrl}
             alt={category.name}
         />
 

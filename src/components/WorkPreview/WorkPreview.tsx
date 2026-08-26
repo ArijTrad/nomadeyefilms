@@ -1,17 +1,40 @@
 /* WorkPreview.tsx */
 
+import { useEffect, useState } from "react";
+
+// Data layer
+import {
+    getWorkPreviews,
+    type WorkPreview as WorkPreviewType,
+} from "../../data/workpreview";
+
+// UI & components
 import WorkPreviewCard from "./WorkPreviewCard";
 import UiLink from "../ui/UiLink/UiLink";
 
+// Styles
 import styles from "./WorkPreview.module.css";
 
-import { workPreview } from "../../data/workpreview";
-
+// Custom hook
 import { useFadeIn } from "../../hooks/useFadeIn";
+
 
 export default function WorkPreview() {
 
     const { ref, isVisible } = useFadeIn();
+
+    // Work preview data
+    const [works, setWorks] = useState<WorkPreviewType[]>([]);
+
+    // Fetch works
+    useEffect(() => {
+
+        getWorkPreviews()
+            .then((data) => setWorks(data))
+            .catch((error) => console.error(error));
+
+    }, []);
+
 
     return (
         <section
@@ -28,7 +51,7 @@ export default function WorkPreview() {
 
             <div className={styles.grid}>
 
-                {workPreview.map((work, index) => (
+                {works.map((work, index) => (
 
                     <div
                         key={work.id}
@@ -49,9 +72,11 @@ export default function WorkPreview() {
 
 
             <div className={styles.linkcenterer}>
+
                 <UiLink href="/" variant="nav">
                     View More →
                 </UiLink>
+
             </div>
 
         </section>

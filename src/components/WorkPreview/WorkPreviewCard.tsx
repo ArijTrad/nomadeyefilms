@@ -1,41 +1,59 @@
+/* WorkPreviewCard.tsx */
+
 import styles from "./WorkPreviewCard.module.css";
 
 import type { WorkPreview } from "../../data/workpreview";
 
 type WorkPreviewCardProps = {
-  work: WorkPreview;
+    work: WorkPreview;
 };
 
-export default function WorkPreviewCard({ work }: WorkPreviewCardProps) {
-  return (
-    <article className={styles.card}>
+export default function WorkPreviewCard({
+    work
+}: WorkPreviewCardProps) {
 
-      <img
-        className={styles.image}
-        src={work.imagepath}
-        alt={work.title}
-      />
+    return (
+        <article className={styles.card}>
 
-      <div className={styles.overlay}>
+            {work.previewVideoUrl ? (
+                <video
+                    className={styles.image}
+                    src={work.previewVideoUrl}
+                    poster={work.thumbnailUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                />
+            ) : (
+                <img
+                    className={styles.image}
+                    src={work.thumbnailUrl}
+                    alt={work.title}
+                />
+            )
+            }
 
-        <p className={styles.description}>
-          {work.description}
-        </p>
+            <div className={styles.overlay}>
 
-      </div>
+                <p className={styles.description}>
+                    {work.description}
+                </p>
 
-      <div className={styles.info}>
+            </div>
 
-        <p className={styles.category}>
-          {work.category}
-        </p>
+            <div className={styles.info}>
 
-        <h3 className={styles.title}>
-          {work.title}
-        </h3>
+                <p className={styles.category}>
+                    {work.category}
+                </p>
 
-      </div>
+                <h3 className={styles.title}>
+                    {work.title}
+                </h3>
 
-    </article>
-  );
+            </div>
+
+        </article>
+    );
 }

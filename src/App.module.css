@@ -24,14 +24,14 @@
     justify-content: start; /*Centers vertically (optional)*/
 
     /*control the gap between sections here not using margins!*/
-    gap: 3em;
+    gap: 6em;
 }
 
 /* Box wrapper for each component*/
 .container {
     width: min( 90vw, var(--max-main-container-width));
 
-    border: 10px solid rgba(212, 255, 0, 0.205);
+/*border: 10px solid rgba(212, 255, 0, 0.205);*/
 
 }
 
