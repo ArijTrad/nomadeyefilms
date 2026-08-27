@@ -7,9 +7,9 @@ export type WorkPreview = {
   title: string;
   category: string;
   description: string;
-  thumbnailUrl: string;
-  previewVideoUrl: string;
-  vimeoId: string;
+  thumbnailUrl?: string;
+  previewVideoUrl?: string;
+  vimeoId?: string;
 };
 
 
@@ -18,9 +18,9 @@ type WorkFromApi = {
   title: string;
   description: string;
   category_id: string;
-  thumbnail_url: string;
-  preview_video_url: string;
-  vimeo_id: string;
+  thumbnail_url?: string;
+  preview_video_url?: string;
+  vimeo_id?: string;
 };
 
 
@@ -40,6 +40,8 @@ export async function getWorkPreviews(): Promise<WorkPreview[]> {
   const categories: Category[] = await categoriesResponse.json();
 
   return works.map((work) => {
+
+    //map category id to the category in data
     const category = categories.find(
       (category) => category.id === work.category_id
     );

@@ -125,6 +125,15 @@
       "thumbnail_url": "/videos/videothumbnails/nature.jpg",
       "preview_video_url": "/videos/videothumbnails/935978814 dr_nabil_zitouna (240p).mp4",
       "vimeo_id": "935978814"
+    },
+    {
+      "id": "9",
+      "title": "video example with no video",
+      "description": "just a card taht is missing a moving video preview.     get over it it still ooks good",
+      "category_id": "medical",
+      "thumbnail_url": "/videos/videothumbnails/nature.jpg",
+      "preview_video_url": "",
+      "vimeo_id": "935978814"
     }
   ]
 }
