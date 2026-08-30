@@ -134,6 +134,15 @@
       "thumbnail_url": "/videos/videothumbnails/nature.jpg",
       "preview_video_url": "",
       "vimeo_id": "935978814"
+    },
+    {
+      "id": "10",
+      "title": "video example with no video",
+      "description": "just a card taht is missing a moving video preview.     get over it it still ooks good",
+      "category_id": "medical",
+      "thumbnail_url": "",
+      "preview_video_url": "",
+      "vimeo_id": "935978814"
     }
   ]
 }
