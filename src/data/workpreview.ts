@@ -28,8 +28,8 @@ type WorkFromApi = {
 
 export async function getWorkPreviews(): Promise<WorkPreview[]> {
   const [worksResponse, categoriesResponse] = await Promise.all([
-    fetch("http://192.168.0.7:3000/works"),
-    fetch("http://192.168.0.7:3000/categories"),
+    fetch("http://localhost:3000/works"),
+    fetch("http://localhost:3000/categories"),
   ]);
 
   if (!worksResponse.ok || !categoriesResponse.ok) {
