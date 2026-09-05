@@ -10,7 +10,6 @@ import App from './App'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
 
-    hiiiiii
     <App />
   </StrictMode>,
 )
