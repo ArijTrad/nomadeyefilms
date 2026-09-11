@@ -1,5 +1,8 @@
 /*categories.ts*/
 
+import { supabase } from "../lib/supabase";
+
+
 export type Category = {
   id: string;
   name: string;
@@ -9,12 +12,21 @@ export type Category = {
 
 
 export async function getCategories(): Promise<Category[]> {
-  const response = await fetch("http://localhost:3000/categories");
+    const { data, error } = await supabase
+    .from("categories")
+    .select("id, name, image_url");
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch categories.");
+
+
+  if (error) {
+    throw new Error(`Failed to fetch categories: ${error.message}`);
   }
 
-  return response.json();
+return data.map((category) => ({
+    id: category.id,
+    name: category.name,
+    imageUrl: category.image_url,
+  }));
+
 }
 
