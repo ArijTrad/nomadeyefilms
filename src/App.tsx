@@ -28,6 +28,11 @@ import UiLiquidGlassFilter from './components/ui/UiLiquidGlass/UiLiquidGlassFilt
 
 
 
+import UiButton from "./components/ui/UiButton/UiButton";
+
+
+
+
 
 
 export default function App() {
@@ -65,9 +70,6 @@ export default function App() {
   <WorkPreview />
 </div>
 
-<div className={styles.container}>
-  <Categories />
-</div>
 
 
 {/*
@@ -115,10 +117,15 @@ export default function App() {
 
             <div className={styles.hi_iam}>
         <h1>hi i am the app main page</h1>
+        <p>testing purposes</p>
         <h2>Count: {count}</h2>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
+        <UiButton
+    variant="ghost"
+    onClick={() => setCount(count + 1)}
+>
+    Click me
+</UiButton>
+
       </div>
 
 

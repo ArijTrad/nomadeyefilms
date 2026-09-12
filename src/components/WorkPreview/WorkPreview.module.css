@@ -53,3 +53,37 @@
 
 
 
+/*
+================================
+===========responsive===========
+================================
+*/
+
+
+
+@media (max-width: 640px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .cardWide {
+        grid-column: span 2;
+        aspect-ratio: 370 / 210;
+    }
+
+    .cardTall {
+        grid-column: span 1;
+        aspect-ratio: 3 / 4;
+    }
+
+}
+
+
+
+
+
+
+
+

@@ -58,6 +58,7 @@
     font-size: 1rem;
     font-weight: 500;
 
+
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -133,6 +134,9 @@
     box-shadow: 0 7px 20px rgba(255, 255, 255, 0.094);
 }
 
+.card:hover .info {
+    opacity: 0;
+}
 
 .card:hover .overlay {
     opacity: 1;
@@ -142,7 +146,7 @@
 /* Slightly darken image underneath */
 
 .card:hover .image {
-    filter: brightness(0.55);
+    filter: brightness(0.24);
 }
 
 
@@ -153,3 +157,45 @@
 
     transition-duration: 0.05s;
 }
+
+
+/*
+================================
+===========responsive===========
+================================
+*/
+
+@media (max-width: 640px) {
+
+.card {
+    border-radius: 0.6em;
+}
+
+
+/*text propeties*/
+.category {
+    margin: 0;
+    font-size: 0.65rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 0.86rem;
+    font-weight: 500;
+}
+
+.description {
+    max-width: 95%;
+    font-size: 0.7rem;
+    line-height: 1.3;
+}
+
+}
+
+
+
+
+
+
+
+
