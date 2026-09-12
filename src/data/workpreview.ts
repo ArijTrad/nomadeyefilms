@@ -1,6 +1,4 @@
-/* workpreview.ts */
-
-import type { Category } from "./categories";
+import { supabase } from "../lib/supabase";
 
 export type WorkPreview = {
   id: string;
@@ -12,7 +10,6 @@ export type WorkPreview = {
   vimeoId?: string;
 };
 
-
 type WorkFromApi = {
   id: string;
   title: string;
@@ -23,25 +20,37 @@ type WorkFromApi = {
   vimeo_id?: string;
 };
 
-
-
-
 export async function getWorkPreviews(): Promise<WorkPreview[]> {
-  const [worksResponse, categoriesResponse] = await Promise.all([
-    fetch("http://localhost:3000/works"),
-    fetch("http://localhost:3000/categories"),
-  ]);
+  const { data, error } = await supabase
+    .from("works")
+    .select(`
+      id,
+      title,
+      description,
+      category_id,
+      thumbnail_url,
+      preview_video_url,
+      vimeo_id
+    `);
 
-  if (!worksResponse.ok || !categoriesResponse.ok) {
-    throw new Error("Failed to fetch work previews.");
+  if (error) {
+    throw new Error(`Failed to fetch work previews: ${error.message}`);
   }
 
-  const works: WorkFromApi[] = await worksResponse.json();
-  const categories: Category[] = await categoriesResponse.json();
+  const works: WorkFromApi[] = data;
+
+  // We still need the category name because works stores category_id.
+  const { data: categories, error: categoriesError } = await supabase
+    .from("categories")
+    .select("id, name");
+
+  if (categoriesError) {
+    throw new Error(
+      `Failed to fetch categories for works: ${categoriesError.message}`
+    );
+  }
 
   return works.map((work) => {
-
-    //map category id to the category in data
     const category = categories.find(
       (category) => category.id === work.category_id
     );
